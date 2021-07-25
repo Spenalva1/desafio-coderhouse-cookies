@@ -1,0 +1,30 @@
+{
+  "name": "mongoose",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "faker": "^5.5.3",
+    "handlebars": "^4.7.7",
+    "moment": "^2.29.1",
+    "mongoose": "^5.13.2",
+    "nodemon": "^2.0.12",
+    "normalizr": "^3.6.1",
+    "pug": "^3.0.2",
+    "socket.io": "^4.1.2"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}

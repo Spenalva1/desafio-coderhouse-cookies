@@ -1,0 +1,35 @@
+html
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous")
+    title Productos
+  body
+    div(class="jumbotron container-fluid" style="min-height: 100vh; display: flex; flex-direction: column")
+
+      block(class="logged-alert d-flex justify-content-between align-items-center alert alert-primary fw-bold mt-4" role="alert")
+        if nameExists
+          h2(class="fw-bold logged-message") Bienvenido #{name}
+        else
+          h2(class="fw-bold logged-message") Bienvenido
+        a(href="/logout" class="btn btn-warning") Desloguear
+
+
+      h2(class="mb-4 mt-4") Productos
+
+      if productsExists
+        block(class="bg-dark text-light")
+          block(class="row border-bottom")
+            block(class="col-4 p-4 fw-bold") Nombre
+            block(class="col-4 p-4 fw-bold") Precio
+            block(class="col-4 p-4 fw-bold") Foto
+
+          each product in products
+            block(class="row border-bottom")
+              block(class="col-4 p-4") #{product.title}
+              block(class="col-4 p-4") #{product.price}
+              block(class="col-4 p-4")
+                img(width="50" src=product.thumbnail alt="not found")
+      else
+        block(class="alert alert-warning fw-bold" role="alert") No se encontraron productos

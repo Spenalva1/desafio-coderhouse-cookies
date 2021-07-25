@@ -1,0 +1,20 @@
+.chat-messages {
+  border: 1px solid black;
+  padding: 12px;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.author {
+  font-weight: bold;
+  color: blue;
+}
+
+.date {
+  color: brown;
+}
+
+.message {
+  font-style: italic;
+  color: green;
+}
